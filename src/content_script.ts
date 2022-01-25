@@ -189,6 +189,14 @@ export async function init() {
   }
 }
 
-(async function () {
-  await init();
-})();
+export function getSubtitleInnerText(child: Element | null) {
+  if (child) {
+    // grab the first inner child
+    const line = child.children[0];
+    return line.textContent;
+  }
+}
+
+// (async function () {
+//   await init();
+// })();
