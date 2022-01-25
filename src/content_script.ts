@@ -197,6 +197,22 @@ export function getSubtitleInnerText(child: Element | null) {
   }
 }
 
+export function getSubtitles(_dom: Document): string {
+  if (_dom) {
+    const elements = _dom.querySelectorAll<HTMLSpanElement>(
+      ".dss-subtitle-renderer-line"
+    );
+
+    const lines = Array.from(elements).map(
+      (el: HTMLSpanElement) => el.textContent
+    );
+
+    return lines.join(" ");
+  }
+
+  return "";
+}
+
 // (async function () {
 //   await init();
 // })();
