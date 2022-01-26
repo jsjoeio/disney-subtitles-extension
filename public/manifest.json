@@ -1,16 +1,15 @@
 {
   "manifest_version": 3,
 
-  "name": "GitHub Email Extension",
-  "description": "A browser extension which shows a developer's email on their profile page (if not there already) by searching their commits.",
+  "name": "Disney Subtitles Extension",
+  "description": "A browser extension which adds a copy to clipboard element to the controls to copy subtitles.",
   "version": "0.0.0.1",
 
   "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
 
   "content_scripts": [
     {
-      "matches": ["https://github.com/*"],
-      "exclude_matches": ["https://github.com/*/*"],
+      "matches": ["https://www.disneyplus.com/video/*"],
       "js": ["js/content_script.js"]
     }
   ]
